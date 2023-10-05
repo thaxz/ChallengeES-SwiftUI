@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EditView: View {
     
-    @StateObject var viewModel: HomeViewModel = HomeViewModel()
+    @EnvironmentObject var viewModel: HomeViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     let type: EditType
     let task: MyTask? = nil
@@ -19,6 +20,7 @@ struct EditView: View {
     
     var body: some View {
         ZStack(alignment: .leading){
+            Color.theme.background.ignoresSafeArea()
             VStack(alignment: .leading, spacing: 24){
                 Text("Título")
                     .font(.system(size: 24, weight: .bold))
@@ -38,6 +40,7 @@ struct EditView: View {
                     switch type {
                     case .add:
                         viewModel.createTask(title: titleText, description: descriptionText)
+                        presentationMode.wrappedValue.dismiss()
                     case .edit:
                         print("edit task")
                     }

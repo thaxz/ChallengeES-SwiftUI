@@ -33,7 +33,7 @@ struct HomeView: View {
             .toolbar {
                 NavigationLink {
                     EditView(type: .add)
-                        .environmentObject(HomeViewModel())
+                        .environmentObject(viewModel)
                 } label: {
                     Image(systemName: "plus")
                 }
