@@ -27,7 +27,15 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 24)
             }
-        .navigationTitle("Tarefas")
+            .navigationTitle("Tarefas")
+            .toolbar {
+                NavigationLink {
+                    EditView(type: .add)
+                } label: {
+                    Image(systemName: "plus")
+                }
+
+            }
     }
 }
 

@@ -8,26 +8,20 @@
 import Foundation
 import SwiftUI
 
-extension PreviewProvider{
-    
-    static var dev: DeveloperPreview{
-        return DeveloperPreview.shared
-    }
-    
-}
+//extension PreviewProvider{
+//    
+//    static var dev: DeveloperPreview{
+//        return DeveloperPreview.shared
+//    }
+//    
+//}
 
-class DeveloperPreview {
-    
-    static let shared = DeveloperPreview()
-    private init() {}
-    
-    var mockTask: MyTask {
-        let task = MyTask()
-        task.id = UUID()
-        task.dateCreated = Date()
-        task.taskDescription = "Sou uma escrição"
-        task.title = "Sou um título"
-        return task
-    }
-    
-}
+//class DeveloperPreview {
+//
+//    static let shared = DeveloperPreview()
+//    private init() {}
+//
+//    var mockTask: MyTask = MyTask()
+//    mockT
+//
+//}

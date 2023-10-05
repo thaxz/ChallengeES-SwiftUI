@@ -36,8 +36,8 @@ struct TaskRow: View {
     }
 }
 
-struct TaskRow_Previews: PreviewProvider {
-    static var previews: some View {
-        TaskRow(task: dev.mockTask)
-    }
-}
+//struct TaskRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TaskRow(task: dev.mockTask)
+//    }
+//}
