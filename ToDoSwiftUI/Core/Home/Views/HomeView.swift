@@ -20,10 +20,11 @@ struct HomeView: View {
                             ForEach(viewModel.tasks){ task in
                                 TaskRow(task: task)
                             }
+                            .onDelete(perform: viewModel.deleteTask)
                             .listRowSeparatorTint(.pink)
                             .listRowBackground(Color.clear)
                         }
-                        .listStyle(.plain)
+                        .listStyle(.plain)    
                     }
                     Spacer()
                     taskCount

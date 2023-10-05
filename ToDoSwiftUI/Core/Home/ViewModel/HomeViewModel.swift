@@ -48,12 +48,12 @@ final class HomeViewModel: ObservableObject {
     
     /// Delete
     /// Since our tasks are displayed on a list, we're using the index to delete it
-    func deleteFruit(indexSet: IndexSet){
-    guard let index = indexSet.first else {return}
-    let entity = tasks[index]
-    manager.context.delete(entity)
-    save()
-}
+    func deleteTask(indexSet: IndexSet){
+        guard let index = indexSet.first else {return}
+        let entity = tasks[index]
+        manager.context.delete(entity)
+        save()
+    }
     
     func save(){
         manager.save()
