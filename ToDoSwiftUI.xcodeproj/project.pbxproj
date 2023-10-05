@@ -15,6 +15,7 @@
 		E90CB15D2ACF296900A01FBA /* ToDoSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB15C2ACF296900A01FBA /* ToDoSwiftUIUITests.swift */; };
 		E90CB15F2ACF296900A01FBA /* ToDoSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB15E2ACF296900A01FBA /* ToDoSwiftUIUITestsLaunchTests.swift */; };
 		E90CB1732ACF2F8D00A01FBA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1722ACF2F8D00A01FBA /* Color.swift */; };
+		E90CB1772ACF308600A01FBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1762ACF308600A01FBA /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		E90CB15C2ACF296900A01FBA /* ToDoSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIUITests.swift; sourceTree = "<group>"; };
 		E90CB15E2ACF296900A01FBA /* ToDoSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E90CB1722ACF2F8D00A01FBA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E90CB1762ACF308600A01FBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +160,8 @@
 		E90CB16E2ACF2F2700A01FBA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E90CB1432ACF296700A01FBA /* HomeView.swift */,
+				E90CB1752ACF307100A01FBA /* ViewModel */,
+				E90CB1742ACF306900A01FBA /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -184,6 +187,22 @@
 				E90CB1722ACF2F8D00A01FBA /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E90CB1742ACF306900A01FBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E90CB1432ACF296700A01FBA /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E90CB1752ACF307100A01FBA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E90CB1762ACF308600A01FBA /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +338,7 @@
 				E90CB1442ACF296700A01FBA /* HomeView.swift in Sources */,
 				E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */,
 				E90CB1732ACF2F8D00A01FBA /* Color.swift in Sources */,
+				E90CB1772ACF308600A01FBA /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
