@@ -18,6 +18,8 @@
 		E90CB1772ACF308600A01FBA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1762ACF308600A01FBA /* HomeViewModel.swift */; };
 		E90CB1792ACF33B300A01FBA /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1782ACF33B300A01FBA /* TaskRow.swift */; };
 		E90CB17B2ACF370E00A01FBA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB17A2ACF370E00A01FBA /* CoreDataManager.swift */; };
+		E90CB17F2ACF377C00A01FBA /* TasksContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E90CB17D2ACF377C00A01FBA /* TasksContainer.xcdatamodeld */; };
+		E90CB1812ACF3A2100A01FBA /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1802ACF3A2100A01FBA /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		E90CB1762ACF308600A01FBA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E90CB1782ACF33B300A01FBA /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		E90CB17A2ACF370E00A01FBA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E90CB17E2ACF377C00A01FBA /* TasksContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksContainer.xcdatamodel; sourceTree = "<group>"; };
+		E90CB1802ACF3A2100A01FBA /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 			children = (
 				E90CB1412ACF296700A01FBA /* ToDoSwiftUIApp.swift */,
 				E90CB16B2ACF2F0A00A01FBA /* Managers */,
+				E90CB17C2ACF376300A01FBA /* Models */,
 				E90CB16C2ACF2F1600A01FBA /* Core */,
 				E90CB1702ACF2F6F00A01FBA /* Utilities */,
 				E90CB1452ACF296900A01FBA /* Assets.xcassets */,
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				E90CB1722ACF2F8D00A01FBA /* Color.swift */,
+				E90CB1802ACF3A2100A01FBA /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +215,14 @@
 				E90CB1762ACF308600A01FBA /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E90CB17C2ACF376300A01FBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E90CB17D2ACF377C00A01FBA /* TasksContainer.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,8 +357,10 @@
 			files = (
 				E90CB17B2ACF370E00A01FBA /* CoreDataManager.swift in Sources */,
 				E90CB1792ACF33B300A01FBA /* TaskRow.swift in Sources */,
+				E90CB17F2ACF377C00A01FBA /* TasksContainer.xcdatamodeld in Sources */,
 				E90CB1442ACF296700A01FBA /* HomeView.swift in Sources */,
 				E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */,
+				E90CB1812ACF3A2100A01FBA /* PreviewProvider.swift in Sources */,
 				E90CB1732ACF2F8D00A01FBA /* Color.swift in Sources */,
 				E90CB1772ACF308600A01FBA /* HomeViewModel.swift in Sources */,
 			);
@@ -673,6 +689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E90CB17D2ACF377C00A01FBA /* TasksContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E90CB17E2ACF377C00A01FBA /* TasksContainer.xcdatamodel */,
+			);
+			currentVersion = E90CB17E2ACF377C00A01FBA /* TasksContainer.xcdatamodel */;
+			path = TasksContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E90CB1362ACF296700A01FBA /* Project object */;
 }

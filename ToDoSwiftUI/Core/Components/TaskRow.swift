@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct TaskRow: View {
-    let task: Int
+    
+    let task: MyTask
+    
     var body: some View {
         HStack(){
             VStack(alignment: .leading, spacing: 8){
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Text(task.title ?? "Not available")
                     .font(.system(size: 18, weight: .semibold))
                     .foregroundColor(.theme.title)
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Text(task.taskDescription ?? "Not available")
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(.secondary)
                 Divider()
@@ -36,6 +38,6 @@ struct TaskRow: View {
 
 struct TaskRow_Previews: PreviewProvider {
     static var previews: some View {
-        TaskRow(task: 1)
+        TaskRow(task: dev.mockTask)
     }
 }

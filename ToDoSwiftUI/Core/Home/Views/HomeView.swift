@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     var body: some View {
-        NavigationStack {
             ZStack {
                 Color.theme.background.ignoresSafeArea()
                 VStack {
@@ -18,8 +17,8 @@ struct HomeView: View {
                         emptyView
                     } else {
                         List{
-                            ForEach(viewModel.tasks, id: \.self) { task in
-                                TaskRow(task: 3)
+                            ForEach(viewModel.tasks){ task in
+                                TaskRow(task: task)
                             }
                         }
                     }
@@ -28,7 +27,6 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 24)
             }
-        }
         .navigationTitle("Tarefas")
     }
 }
