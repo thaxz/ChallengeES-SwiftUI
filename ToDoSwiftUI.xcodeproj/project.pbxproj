@@ -14,6 +14,7 @@
 		E90CB1532ACF296900A01FBA /* ToDoSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1522ACF296900A01FBA /* ToDoSwiftUITests.swift */; };
 		E90CB15D2ACF296900A01FBA /* ToDoSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB15C2ACF296900A01FBA /* ToDoSwiftUIUITests.swift */; };
 		E90CB15F2ACF296900A01FBA /* ToDoSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB15E2ACF296900A01FBA /* ToDoSwiftUIUITestsLaunchTests.swift */; };
+		E90CB1732ACF2F8D00A01FBA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1722ACF2F8D00A01FBA /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E90CB1582ACF296900A01FBA /* ToDoSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90CB15C2ACF296900A01FBA /* ToDoSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIUITests.swift; sourceTree = "<group>"; };
 		E90CB15E2ACF296900A01FBA /* ToDoSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E90CB1722ACF2F8D00A01FBA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				E90CB1412ACF296700A01FBA /* ToDoSwiftUIApp.swift */,
-				E90CB1432ACF296700A01FBA /* HomeView.swift */,
+				E90CB16B2ACF2F0A00A01FBA /* Managers */,
+				E90CB16C2ACF2F1600A01FBA /* Core */,
+				E90CB1702ACF2F6F00A01FBA /* Utilities */,
 				E90CB1452ACF296900A01FBA /* Assets.xcassets */,
 				E90CB1472ACF296900A01FBA /* Preview Content */,
 			);
@@ -125,6 +129,61 @@
 				E90CB15E2ACF296900A01FBA /* ToDoSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = ToDoSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		E90CB16B2ACF2F0A00A01FBA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E90CB16C2ACF2F1600A01FBA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E90CB16D2ACF2F2000A01FBA /* Components */,
+				E90CB16F2ACF2F2C00A01FBA /* Details */,
+				E90CB16E2ACF2F2700A01FBA /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E90CB16D2ACF2F2000A01FBA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E90CB16E2ACF2F2700A01FBA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E90CB1432ACF296700A01FBA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E90CB16F2ACF2F2C00A01FBA /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		E90CB1702ACF2F6F00A01FBA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E90CB1712ACF2F8200A01FBA /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E90CB1712ACF2F8200A01FBA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E90CB1722ACF2F8D00A01FBA /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +318,7 @@
 			files = (
 				E90CB1442ACF296700A01FBA /* HomeView.swift in Sources */,
 				E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */,
+				E90CB1732ACF2F8D00A01FBA /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
