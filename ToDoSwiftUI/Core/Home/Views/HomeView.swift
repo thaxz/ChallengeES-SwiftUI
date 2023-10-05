@@ -31,13 +31,18 @@ struct HomeView: View {
             }
             .navigationTitle("Tarefas")
             .toolbar {
-                NavigationLink {
-                    EditView(type: .add)
-                        .environmentObject(viewModel)
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
                 }
-
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        EditView(type: .add)
+                            .environmentObject(viewModel)
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                
             }
     }
 }
