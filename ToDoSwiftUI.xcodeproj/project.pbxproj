@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1412ACF296700A01FBA /* ToDoSwiftUIApp.swift */; };
-		E90CB1442ACF296700A01FBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1432ACF296700A01FBA /* ContentView.swift */; };
+		E90CB1442ACF296700A01FBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1432ACF296700A01FBA /* HomeView.swift */; };
 		E90CB1462ACF296900A01FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90CB1452ACF296900A01FBA /* Assets.xcassets */; };
 		E90CB1492ACF296900A01FBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90CB1482ACF296900A01FBA /* Preview Assets.xcassets */; };
 		E90CB1532ACF296900A01FBA /* ToDoSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1522ACF296900A01FBA /* ToDoSwiftUITests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		E90CB13E2ACF296700A01FBA /* ToDoSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E90CB1412ACF296700A01FBA /* ToDoSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoSwiftUIApp.swift; sourceTree = "<group>"; };
-		E90CB1432ACF296700A01FBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E90CB1432ACF296700A01FBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E90CB1452ACF296900A01FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E90CB1482ACF296900A01FBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E90CB14E2ACF296900A01FBA /* ToDoSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				E90CB1412ACF296700A01FBA /* ToDoSwiftUIApp.swift */,
-				E90CB1432ACF296700A01FBA /* ContentView.swift */,
+				E90CB1432ACF296700A01FBA /* HomeView.swift */,
 				E90CB1452ACF296900A01FBA /* Assets.xcassets */,
 				E90CB1472ACF296900A01FBA /* Preview Content */,
 			);
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E90CB1442ACF296700A01FBA /* ContentView.swift in Sources */,
+				E90CB1442ACF296700A01FBA /* HomeView.swift in Sources */,
 				E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,11 +420,12 @@
 				DEVELOPMENT_TEAM = 5S88AY6J4R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tarefas;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +450,12 @@
 				DEVELOPMENT_TEAM = 5S88AY6J4R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Tarefas;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
