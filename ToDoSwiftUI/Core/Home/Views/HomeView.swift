@@ -17,8 +17,10 @@ struct HomeView: View {
                     if viewModel.tasks.isEmpty {
                         emptyView
                     } else {
-                        ScrollView{
-                            
+                        List{
+                            ForEach(viewModel.tasks, id: \.self) { task in
+                                TaskRow(task: 3)
+                            }
                         }
                     }
                     Spacer()
