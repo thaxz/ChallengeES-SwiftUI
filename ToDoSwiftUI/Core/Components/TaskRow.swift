@@ -20,19 +20,12 @@ struct TaskRow: View {
                 Text(task.taskDescription ?? "Not available")
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(.secondary)
-                Divider()
-                    .overlay(Color.accentColor)
             }
             Spacer()
             Image(systemName: "chevron.right")
                 .foregroundColor(.accentColor)
             
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(minHeight: 60)
-        .frame(maxHeight: 80)
-        .padding(.horizontal, 16)
-        .background(Color.theme.background.ignoresSafeArea())
     }
 }
 

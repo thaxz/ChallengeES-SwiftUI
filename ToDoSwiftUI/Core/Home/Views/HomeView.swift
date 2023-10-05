@@ -20,17 +20,20 @@ struct HomeView: View {
                             ForEach(viewModel.tasks){ task in
                                 TaskRow(task: task)
                             }
+                            .listRowSeparatorTint(.pink)
+                            .listRowBackground(Color.clear)
                         }
+                        .listStyle(.plain)
                     }
                     Spacer()
                     taskCount
                 }
-                .padding(.horizontal, 24)
             }
             .navigationTitle("Tarefas")
             .toolbar {
                 NavigationLink {
                     EditView(type: .add)
+                        .environmentObject(HomeViewModel())
                 } label: {
                     Image(systemName: "plus")
                 }
