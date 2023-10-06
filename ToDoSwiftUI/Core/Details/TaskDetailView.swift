@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-struct DetailLoadingView: View{
-    
-    @Binding var task: MyTask?
-    
-    var body: some View {
-        ZStack{
-            if let task = task {
-                TaskDetailView(task: task)
-            }
-        }
-    }
-}
-
 struct TaskDetailView: View {
     
     let task: MyTask
@@ -57,6 +44,7 @@ struct TaskDetailView: View {
                 }
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

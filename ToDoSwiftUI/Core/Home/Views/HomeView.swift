@@ -10,9 +10,6 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     
-    @State var selectedTask: MyTask? = nil
-    @State var showDetailView: Bool = false
-    
     var body: some View {
             ZStack {
                 Color.theme.background.ignoresSafeArea()
@@ -22,10 +19,11 @@ struct HomeView: View {
                     } else {
                         List{
                             ForEach(viewModel.tasks){ task in
-                                TaskRow(task: task)
-                                    .onTapGesture {
-                                        segue(task: task)
-                                    }
+                                NavigationLink {
+                                    TaskDetailView(task: task)
+                                } label: {
+                                    TaskRow(task: task)
+                                }
                             }
                             .onDelete(perform: viewModel.deleteTask)
                             .listRowSeparatorTint(.pink)
@@ -37,6 +35,7 @@ struct HomeView: View {
                     taskCount
                 }
             }
+            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Tarefas")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -52,17 +51,7 @@ struct HomeView: View {
                 }
                 
             }
-            .background(
-                NavigationLink(
-                    destination: DetailLoadingView(task: $selectedTask),
-                                isActive: $showDetailView,
-                                label: { EmptyView() })
-            )
-    }
-    
-    func segue(task: MyTask){
-        selectedTask = task
-        showDetailView.toggle()
+            
     }
 }
 

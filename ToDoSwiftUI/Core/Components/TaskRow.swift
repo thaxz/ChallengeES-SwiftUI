@@ -12,21 +12,15 @@ struct TaskRow: View {
     let task: MyTask
     
     var body: some View {
-        HStack(){
-            VStack(alignment: .leading, spacing: 8){
-                Text(task.title ?? "Not available")
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundColor(.theme.title)
-                Text(task.taskDescription ?? "Not available")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundColor(.secondary)
-            }
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(.accentColor)
-            
+        VStack(alignment: .leading, spacing: 8){
+            Text(task.title ?? "Not available")
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundColor(.theme.title)
+            Text(task.taskDescription ?? "Not available")
+                .font(.system(size: 15, weight: .semibold))
+                .foregroundColor(.secondary)
         }
-        .background(Color.theme.background)
+        Spacer()
     }
 }
 
