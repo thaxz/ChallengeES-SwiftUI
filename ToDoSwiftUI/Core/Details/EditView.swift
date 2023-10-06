@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The view responsible to edit an existing task
 struct EditView: View {
     
     @ObservedObject var viewModel: HomeViewModel
@@ -14,10 +15,11 @@ struct EditView: View {
     
     let task: MyTask
     
+    // State properties to store the edited title and description
     @State private var titleText: String
     @State private var descriptionText: String
-    @State private var didChange = false
     
+    // Initializer to set up the view with the task and view model
     init(task: MyTask, viewModel: HomeViewModel) {
         self.task = task
         self.viewModel = viewModel
@@ -43,9 +45,9 @@ struct EditView: View {
                 TextField("Edite a descrição", text: $descriptionText)
                     .padding()
                     .background(.gray.opacity(0.2))
+                // Save button to update the task and dismiss the view
                 Button {
                     viewModel.updateTask(task: task, newTitle: titleText, newDescription: descriptionText)
-                    didChange = true
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     RoundedRectangle(cornerRadius: 8)
@@ -60,11 +62,3 @@ struct EditView: View {
         }
     }
 }
-
-//struct EditView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack{
-//            EditView()
-//        }
-//    }
-//}

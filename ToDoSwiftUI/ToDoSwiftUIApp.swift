@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct ToDoSwiftUIApp: App {
+    // Create a shared instance of HomeViewModel for managing app data
     @StateObject var viewModel = HomeViewModel()
     var body: some Scene {
         WindowGroup {

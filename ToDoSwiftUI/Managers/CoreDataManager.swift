@@ -12,10 +12,11 @@ class CoreDataManager {
     
     static let shared = CoreDataManager()
     
-    // Persistence objects
+    /// Persistence objects
     let container: NSPersistentContainer
     let context: NSManagedObjectContext
     
+    /// Initializes Core Data container and context.
     init(){
         container = NSPersistentContainer(name: "TasksContainer")
         container.loadPersistentStores { description, error in
@@ -27,6 +28,7 @@ class CoreDataManager {
     }
     
     // MARK: Save
+    /// Saves into Core Data .
     func save(){
         do {
             try context.save()

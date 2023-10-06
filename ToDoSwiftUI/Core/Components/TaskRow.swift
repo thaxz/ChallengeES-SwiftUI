@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+/// Custom component representing a task cell in the list view.
 struct TaskRow: View {
     
+    // Task object to display in the cell
     let task: MyTask
     
     var body: some View {
@@ -24,8 +26,4 @@ struct TaskRow: View {
     }
 }
 
-//struct TaskRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TaskRow(task: dev.mockTask)
-//    }
-//}
+

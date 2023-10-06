@@ -9,11 +9,12 @@ import Foundation
 import SwiftUI
 import CoreData
 
-@MainActor
+/// View model responsible for managing tasks and interacting with Core Data.
 final class HomeViewModel: ObservableObject {
     
     let manager = CoreDataManager.shared
     
+    /// Published property to store the list of tasks.
     @Published var tasks: [MyTask] = []
     
     init(){
@@ -21,6 +22,7 @@ final class HomeViewModel: ObservableObject {
     }
     
     /// Fetch
+    /// Fetches tasks from Core Data and updates the `tasks`.
     func getTasks(){
         let request = NSFetchRequest<MyTask>(entityName: "MyTask")
         do {
@@ -30,7 +32,8 @@ final class HomeViewModel: ObservableObject {
         }
     }
     
-    /// Save
+    /// Create
+    /// Creates a new task with the provided title and description.
     func createTask(title: String, description: String) {
         let task = MyTask(context: manager.context)
         task.id = UUID()
@@ -41,6 +44,7 @@ final class HomeViewModel: ObservableObject {
     }
     
     /// Update
+    /// Updates the title and description of the task in
     func updateTask(task: MyTask, newTitle: String, newDescription: String){
         task.title = newTitle
         task.taskDescription = newDescription

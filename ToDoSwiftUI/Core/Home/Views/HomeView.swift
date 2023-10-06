@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The main view displaying the list of tasks
 struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel
@@ -17,11 +18,13 @@ struct HomeView: View {
     var body: some View {
             ZStack {
                 Color.theme.background.ignoresSafeArea()
+                // Display an view with a message if the view is empty
                 VStack {
                     if viewModel.tasks.isEmpty {
                         emptyView
                     } else {
                         List{
+                            // Iterate through tasks and create navigation links for each task
                             ForEach(viewModel.tasks){ task in
                                 NavigationLink {
                                     TaskDetailView(viewModel: viewModel, task: task)
@@ -38,6 +41,9 @@ struct HomeView: View {
                     Spacer()
                     taskCount
                 }
+            }
+            .onAppear{
+                viewModel.getTasks()
             }
             .navigationTitle("Tarefas")
             .toolbar {
@@ -60,6 +66,7 @@ struct HomeView: View {
 
 extension HomeView {
     
+    // A view displayed when there are no tasks.
     var emptyView: some View {
         VStack(spacing: 32){
             Image(systemName: "exclamationmark.circle")
@@ -75,6 +82,7 @@ extension HomeView {
         .padding(.vertical, 100)
     }
     
+    // A view displaying the count of tasks.
     var taskCount: some View {
         VStack{
             Rectangle()

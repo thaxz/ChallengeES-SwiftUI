@@ -22,6 +22,7 @@
 		E90CB1832ACF3EEC00A01FBA /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1822ACF3EEC00A01FBA /* EditView.swift */; };
 		E90CB1882ACF4ED100A01FBA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1872ACF4ED100A01FBA /* TaskDetailView.swift */; };
 		E97E2F142AD055EB008FDBFA /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97E2F132AD055EB008FDBFA /* AddView.swift */; };
+		E97E2F162AD082AF008FDBFA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97E2F152AD082AF008FDBFA /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		E90CB1822ACF3EEC00A01FBA /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		E90CB1872ACF4ED100A01FBA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		E97E2F132AD055EB008FDBFA /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		E97E2F152AD082AF008FDBFA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		E97E2F172AD08A5B008FDBFA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 		E90CB1352ACF296700A01FBA = {
 			isa = PBXGroup;
 			children = (
+				E97E2F172AD08A5B008FDBFA /* README.md */,
 				E90CB1402ACF296700A01FBA /* ToDoSwiftUI */,
 				E90CB1512ACF296900A01FBA /* ToDoSwiftUITests */,
 				E90CB15B2ACF296900A01FBA /* ToDoSwiftUIUITests */,
@@ -203,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				E90CB1722ACF2F8D00A01FBA /* Color.swift */,
+				E97E2F152AD082AF008FDBFA /* DateFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				E97E2F142AD055EB008FDBFA /* AddView.swift in Sources */,
 				E90CB17F2ACF377C00A01FBA /* TasksContainer.xcdatamodeld in Sources */,
 				E90CB1882ACF4ED100A01FBA /* TaskDetailView.swift in Sources */,
+				E97E2F162AD082AF008FDBFA /* DateFormatter.swift in Sources */,
 				E90CB1442ACF296700A01FBA /* HomeView.swift in Sources */,
 				E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */,
 				E90CB1832ACF3EEC00A01FBA /* EditView.swift in Sources */,

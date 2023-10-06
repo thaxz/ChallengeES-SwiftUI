@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A view displaying detailed information about a selected task
 struct TaskDetailView: View {
     
     @ObservedObject var viewModel: HomeViewModel
@@ -29,7 +30,7 @@ struct TaskDetailView: View {
                 Text("Criada em")
                     .font(.system(size: 22, weight: .bold))
                     .foregroundColor(Color.theme.title)
-                Text("\(task.dateCreated!)")
+                Text(DateFormatter.customDateFormatter.string(from: task.dateCreated!))
                     .font(.system(size: 17, weight: .regular))
                     .foregroundColor(Color.black)
                 Spacer()
@@ -38,6 +39,7 @@ struct TaskDetailView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .toolbar {
+            // Navigation link to the edit view
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
                     EditView(task: task, viewModel: viewModel)
@@ -49,11 +51,3 @@ struct TaskDetailView: View {
         }
     }
 }
-
-//struct TaskDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack{
-//            TaskDetailView(task: )
-//        }
-//    }
-//}
