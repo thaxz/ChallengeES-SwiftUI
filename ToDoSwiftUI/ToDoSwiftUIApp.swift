@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct ToDoSwiftUIApp: App {
+    @StateObject var viewModel = HomeViewModel()
     var body: some Scene {
         WindowGroup {
             NavigationStack{
-                HomeView()
+                HomeView(viewModel: viewModel)
             }
         }
     }

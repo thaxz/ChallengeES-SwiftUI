@@ -9,16 +9,18 @@ import SwiftUI
 
 struct EditView: View {
     
-    @EnvironmentObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel: HomeViewModel
     @Environment(\.presentationMode) var presentationMode
     
     let task: MyTask
     
     @State private var titleText: String
     @State private var descriptionText: String
+    @State private var didChange = false
     
-    init(task: MyTask) {
+    init(task: MyTask, viewModel: HomeViewModel) {
         self.task = task
+        self.viewModel = viewModel
         self._titleText = State(initialValue: task.title ?? "")
         self._descriptionText = State(initialValue: task.taskDescription ?? "")
     }
@@ -43,6 +45,7 @@ struct EditView: View {
                     .background(.gray.opacity(0.2))
                 Button {
                     viewModel.updateTask(task: task, newTitle: titleText, newDescription: descriptionText)
+                    didChange = true
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     RoundedRectangle(cornerRadius: 8)

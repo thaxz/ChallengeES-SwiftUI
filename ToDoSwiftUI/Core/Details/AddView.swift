@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddView: View {
     
-    @EnvironmentObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel: HomeViewModel
     @Environment(\.presentationMode) var presentationMode
     
     @State var titleText: String = ""
@@ -45,13 +45,13 @@ struct AddView: View {
                 Spacer()
             }
             .padding(24)
-            .navigationTitle("Editar Tarefa")
+            .navigationTitle("Adicionar Tarefa")
         }
     }
 }
 
-struct AddView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddView()
-    }
-}
+//struct AddView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //AddView()
+//    }
+//}

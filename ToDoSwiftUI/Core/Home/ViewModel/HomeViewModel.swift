@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import CoreData
 
+@MainActor
 final class HomeViewModel: ObservableObject {
     
     let manager = CoreDataManager.shared

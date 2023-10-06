@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = HomeViewModel()
+    
+    @ObservedObject var viewModel: HomeViewModel
     
     @State var selectedTask: MyTask? = nil
     @State var showDetailView: Bool = false
@@ -23,8 +24,7 @@ struct HomeView: View {
                         List{
                             ForEach(viewModel.tasks){ task in
                                 NavigationLink {
-                                    TaskDetailView(task: task)
-                                        .environmentObject(viewModel)
+                                    TaskDetailView(viewModel: viewModel, task: task)
                                 } label: {
                                     TaskRow(task: task)
                                 }
@@ -46,8 +46,7 @@ struct HomeView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        AddView()
-                            .environmentObject(viewModel)
+                        AddView(viewModel: viewModel)
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -95,7 +94,7 @@ extension HomeView {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack{
-            HomeView()
+            //HomeView()
         }
     }
 }

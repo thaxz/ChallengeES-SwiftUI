@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskDetailView: View {
     
-    @EnvironmentObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel: HomeViewModel
     
     let task: MyTask
     
@@ -40,8 +40,7 @@ struct TaskDetailView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    EditView(task: task)
-                        .environmentObject(viewModel)
+                    EditView(task: task, viewModel: viewModel)
                 } label: {
                     Text("EDIT")
                         .foregroundColor(.accentColor)
