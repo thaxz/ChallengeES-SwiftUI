@@ -41,6 +41,7 @@ struct HomeView: View {
                     Spacer()
                     taskCount
                 }
+                .padding(.horizontal)
             }
             .onAppear{
                 viewModel.getTasks()
