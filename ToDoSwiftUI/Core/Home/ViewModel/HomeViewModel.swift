@@ -29,23 +29,6 @@ final class HomeViewModel: ObservableObject {
         }
     }
     
-    /// Save
-    func createTask(title: String, description: String) {
-        let task = MyTask(context: manager.context)
-        task.id = UUID()
-        task.title = title
-        task.taskDescription = description
-        task.dateCreated = Date()
-        save()
-    }
-    
-    /// Update
-    func updateTask(task: MyTask, newTitle: String, newDescription: String){
-        task.title = newTitle
-        task.taskDescription = newDescription
-        save()
-    }
-    
     /// Delete
     /// Since our tasks are displayed on a list, we're using the index to delete it
     func deleteTask(indexSet: IndexSet){
@@ -55,6 +38,7 @@ final class HomeViewModel: ObservableObject {
         save()
     }
     
+    ///Save
     func save(){
         manager.save()
         getTasks()

@@ -22,6 +22,7 @@
 		E90CB1832ACF3EEC00A01FBA /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1822ACF3EEC00A01FBA /* EditView.swift */; };
 		E90CB1862ACF3F0100A01FBA /* EditType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1852ACF3F0100A01FBA /* EditType.swift */; };
 		E90CB1882ACF4ED100A01FBA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1872ACF4ED100A01FBA /* TaskDetailView.swift */; };
+		E97E2F122AD04466008FDBFA /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97E2F112AD04466008FDBFA /* EditViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E90CB1822ACF3EEC00A01FBA /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		E90CB1852ACF3F0100A01FBA /* EditType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditType.swift; sourceTree = "<group>"; };
 		E90CB1872ACF4ED100A01FBA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		E97E2F112AD04466008FDBFA /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		E90CB16F2ACF2F2C00A01FBA /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				E97E2F102AD041C5008FDBFA /* ViewModel */,
 				E90CB1822ACF3EEC00A01FBA /* EditView.swift */,
 				E90CB1872ACF4ED100A01FBA /* TaskDetailView.swift */,
 			);
@@ -237,6 +240,14 @@
 				E90CB1852ACF3F0100A01FBA /* EditType.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		E97E2F102AD041C5008FDBFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E97E2F112AD04466008FDBFA /* EditViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +388,7 @@
 				E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */,
 				E90CB1862ACF3F0100A01FBA /* EditType.swift in Sources */,
 				E90CB1832ACF3EEC00A01FBA /* EditView.swift in Sources */,
+				E97E2F122AD04466008FDBFA /* EditViewModel.swift in Sources */,
 				E90CB1732ACF2F8D00A01FBA /* Color.swift in Sources */,
 				E90CB1772ACF308600A01FBA /* HomeViewModel.swift in Sources */,
 			);

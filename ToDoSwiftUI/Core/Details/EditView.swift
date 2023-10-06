@@ -9,14 +9,18 @@ import SwiftUI
 
 struct EditView: View {
     
-    @EnvironmentObject var viewModel: HomeViewModel
     @Environment(\.presentationMode) var presentationMode
     
-    let type: EditType
-    let task: MyTask? = nil
+    @StateObject var viewModel: EditViewModel
     
-    @State var titleText: String = ""
-    @State var descriptionText: String = ""
+    let type: EditType
+    var task: MyTask? = nil
+    
+    init(type: EditType, task: MyTask? = nil){
+        self.type = type
+        self.task = task
+        self._viewModel = StateObject(wrappedValue: EditViewModel(task: task))
+    }
     
     var body: some View {
         ZStack(alignment: .leading){
@@ -25,24 +29,26 @@ struct EditView: View {
                 Text("Título")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.theme.title)
-                TextField("Adicione um título", text: $titleText)
+                TextField("Adicione um título", text: $viewModel.title)
                     .padding()
                     .background(.gray.opacity(0.2))
-                    
+                
                 Text("Descrição")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.theme.title)
                 
-                TextField("Adicione uma descrição", text: $descriptionText)
+                TextField("Adicione uma descrição", text: $viewModel.description)
                     .padding()
                     .background(.gray.opacity(0.2))
                 Button {
                     switch type {
                     case .add:
-                        viewModel.createTask(title: titleText, description: descriptionText)
+                        viewModel.createTask(title: viewModel.title, description: viewModel.description)
                         presentationMode.wrappedValue.dismiss()
                     case .edit:
-                        print("edit task")
+                        guard let task = task else {return}
+                        viewModel.updateTask(task: task, newTitle: viewModel.title, newDescription: viewModel.description)
+                        presentationMode.wrappedValue.dismiss()
                     }
                 } label: {
                     RoundedRectangle(cornerRadius: 8)
