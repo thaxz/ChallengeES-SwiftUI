@@ -10,10 +10,14 @@ import SwiftUI
 /// The main view displaying the list of tasks
 struct HomeView: View {
     
+    @Environment(\.presentationMode) var presentationMode
     @ObservedObject var viewModel: HomeViewModel
     
     @State var selectedTask: MyTask? = nil
     @State var showDetailView: Bool = false
+
+    // Unique identifier used to force its recreation and update the list 
+    let id = UUID()
     
     var body: some View {
             ZStack {
@@ -43,8 +47,12 @@ struct HomeView: View {
                 }
                 .padding(.horizontal)
             }
+            .id(id)
             .onAppear{
                 viewModel.getTasks()
+            }
+            .onDisappear{
+                presentationMode.wrappedValue.dismiss()
             }
             .navigationTitle("Tarefas")
             .toolbar {
