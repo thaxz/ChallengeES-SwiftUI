@@ -26,6 +26,7 @@ struct TaskRow: View {
                 .foregroundColor(.accentColor)
             
         }
+        .background(Color.theme.background)
     }
 }
 

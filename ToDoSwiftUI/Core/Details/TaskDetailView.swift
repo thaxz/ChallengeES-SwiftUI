@@ -7,18 +7,31 @@
 
 import SwiftUI
 
+struct DetailLoadingView: View{
+    
+    @Binding var task: MyTask?
+    
+    var body: some View {
+        ZStack{
+            if let task = task {
+                TaskDetailView(task: task)
+            }
+        }
+    }
+}
+
 struct TaskDetailView: View {
     
-    //todo: let task e ir pra edit view tipo edit e com a let task
+    let task: MyTask
     
     var body: some View {
         ZStack(alignment: .leading){
             Color.theme.background.ignoresSafeArea()
             VStack(alignment: .leading, spacing: 24){
-                Text("taskTitle")
+                Text(task.title ?? "Not available")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(Color.theme.title)
-                Text("taskDescription")
+                Text(task.taskDescription ?? "Not available" )
                     .font(.system(size: 17, weight: .regular))
                     .foregroundColor(Color.black)
                 Rectangle()
@@ -27,7 +40,7 @@ struct TaskDetailView: View {
                 Text("Criada em")
                     .font(.system(size: 22, weight: .bold))
                     .foregroundColor(Color.theme.title)
-                Text("dateCreation")
+                Text("\(task.dateCreated!)")
                     .font(.system(size: 17, weight: .regular))
                     .foregroundColor(Color.black)
                 Spacer()
@@ -36,17 +49,21 @@ struct TaskDetailView: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Text("EDIT")
-                    .foregroundColor(.accentColor)
+                NavigationLink {
+                    EditView(type: .edit)
+                } label: {
+                    Text("EDIT")
+                        .foregroundColor(.accentColor)
+                }
             }
         }
     }
 }
 
-struct TaskDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack{
-            TaskDetailView()
-        }
-    }
-}
+//struct TaskDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationStack{
+//            TaskDetailView(task: )
+//        }
+//    }
+//}

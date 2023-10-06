@@ -19,7 +19,6 @@
 		E90CB1792ACF33B300A01FBA /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1782ACF33B300A01FBA /* TaskRow.swift */; };
 		E90CB17B2ACF370E00A01FBA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB17A2ACF370E00A01FBA /* CoreDataManager.swift */; };
 		E90CB17F2ACF377C00A01FBA /* TasksContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E90CB17D2ACF377C00A01FBA /* TasksContainer.xcdatamodeld */; };
-		E90CB1812ACF3A2100A01FBA /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1802ACF3A2100A01FBA /* PreviewProvider.swift */; };
 		E90CB1832ACF3EEC00A01FBA /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1822ACF3EEC00A01FBA /* EditView.swift */; };
 		E90CB1862ACF3F0100A01FBA /* EditType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1852ACF3F0100A01FBA /* EditType.swift */; };
 		E90CB1882ACF4ED100A01FBA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90CB1872ACF4ED100A01FBA /* TaskDetailView.swift */; };
@@ -58,7 +57,6 @@
 		E90CB1782ACF33B300A01FBA /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		E90CB17A2ACF370E00A01FBA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E90CB17E2ACF377C00A01FBA /* TasksContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksContainer.xcdatamodel; sourceTree = "<group>"; };
-		E90CB1802ACF3A2100A01FBA /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		E90CB1822ACF3EEC00A01FBA /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		E90CB1852ACF3F0100A01FBA /* EditType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditType.swift; sourceTree = "<group>"; };
 		E90CB1872ACF4ED100A01FBA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				E90CB1722ACF2F8D00A01FBA /* Color.swift */,
-				E90CB1802ACF3A2100A01FBA /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,7 +377,6 @@
 				E90CB1422ACF296700A01FBA /* ToDoSwiftUIApp.swift in Sources */,
 				E90CB1862ACF3F0100A01FBA /* EditType.swift in Sources */,
 				E90CB1832ACF3EEC00A01FBA /* EditView.swift in Sources */,
-				E90CB1812ACF3A2100A01FBA /* PreviewProvider.swift in Sources */,
 				E90CB1732ACF2F8D00A01FBA /* Color.swift in Sources */,
 				E90CB1772ACF308600A01FBA /* HomeViewModel.swift in Sources */,
 			);
