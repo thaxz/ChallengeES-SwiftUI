@@ -10,6 +10,9 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     
+    @State var selectedTask: MyTask? = nil
+    @State var showDetailView: Bool = false
+    
     var body: some View {
             ZStack {
                 Color.theme.background.ignoresSafeArea()
@@ -21,6 +24,7 @@ struct HomeView: View {
                             ForEach(viewModel.tasks){ task in
                                 NavigationLink {
                                     TaskDetailView(task: task)
+                                        .environmentObject(viewModel)
                                 } label: {
                                     TaskRow(task: task)
                                 }
@@ -29,13 +33,12 @@ struct HomeView: View {
                             .listRowSeparatorTint(.pink)
                             .listRowBackground(Color.clear)
                         }
-                        .listStyle(.plain)    
+                        .listStyle(.plain)
                     }
                     Spacer()
                     taskCount
                 }
             }
-            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Tarefas")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -43,7 +46,7 @@ struct HomeView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        EditView(type: .add)
+                        AddView()
                             .environmentObject(viewModel)
                     } label: {
                         Image(systemName: "plus")
@@ -51,7 +54,6 @@ struct HomeView: View {
                 }
                 
             }
-            
     }
 }
 

@@ -1,18 +1,16 @@
 //
-//  EditView.swift
+//  AddView.swift
 //  ToDoSwiftUI
 //
-//  Created by thaxz on 05/10/23.
+//  Created by thaxz on 06/10/23.
 //
 
 import SwiftUI
 
-struct EditView: View {
+struct AddView: View {
     
     @EnvironmentObject var viewModel: HomeViewModel
     @Environment(\.presentationMode) var presentationMode
-    
-    let task: MyTask
     
     @State var titleText: String = ""
     @State var descriptionText: String = ""
@@ -24,7 +22,7 @@ struct EditView: View {
                 Text("Título")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.theme.title)
-                TextField("Edite o título", text: $titleText)
+                TextField("Adicione um título", text: $titleText)
                     .padding()
                     .background(.gray.opacity(0.2))
                     
@@ -32,11 +30,11 @@ struct EditView: View {
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.theme.title)
                 
-                TextField("Edite a descrição", text: $descriptionText)
+                TextField("Adicione uma descrição", text: $descriptionText)
                     .padding()
                     .background(.gray.opacity(0.2))
                 Button {
-                    viewModel.updateTask(task: task, newTitle: titleText, newDescription: descriptionText)
+                    viewModel.createTask(title: titleText, description: descriptionText)
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     RoundedRectangle(cornerRadius: 8)
@@ -52,10 +50,8 @@ struct EditView: View {
     }
 }
 
-//struct EditView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack{
-//            EditView()
-//        }
-//    }
-//}
+struct AddView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddView()
+    }
+}

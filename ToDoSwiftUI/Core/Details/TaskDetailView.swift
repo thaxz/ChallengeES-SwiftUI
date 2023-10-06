@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TaskDetailView: View {
     
+    @EnvironmentObject var viewModel: HomeViewModel
+    
     let task: MyTask
     
     var body: some View {
@@ -24,7 +26,7 @@ struct TaskDetailView: View {
                 Rectangle()
                     .foregroundColor(.accentColor)
                     .frame(height: 2)
-                Text("Criada em:")
+                Text("Criada em")
                     .font(.system(size: 22, weight: .bold))
                     .foregroundColor(Color.theme.title)
                 Text("\(task.dateCreated!)")
@@ -33,18 +35,19 @@ struct TaskDetailView: View {
                 Spacer()
             }
             .padding(24)
+            .navigationBarTitleDisplayMode(.inline)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    EditView(type: .edit, task: task)
+                    EditView(task: task)
+                        .environmentObject(viewModel)
                 } label: {
                     Text("EDIT")
                         .foregroundColor(.accentColor)
                 }
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
