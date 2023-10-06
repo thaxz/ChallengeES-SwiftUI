@@ -14,8 +14,14 @@ struct EditView: View {
     
     let task: MyTask
     
-    @State var titleText: String = ""
-    @State var descriptionText: String = ""
+    @State private var titleText: String
+    @State private var descriptionText: String
+    
+    init(task: MyTask) {
+        self.task = task
+        self._titleText = State(initialValue: task.title ?? "")
+        self._descriptionText = State(initialValue: task.taskDescription ?? "")
+    }
     
     var body: some View {
         ZStack(alignment: .leading){
@@ -27,7 +33,7 @@ struct EditView: View {
                 TextField("Edite o título", text: $titleText)
                     .padding()
                     .background(.gray.opacity(0.2))
-                    
+                
                 Text("Descrição")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundColor(.theme.title)
